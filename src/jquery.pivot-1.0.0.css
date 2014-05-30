@@ -1,0 +1,22 @@
+div.ui-pivot {padding: 2px; display: inline-block; cursor: default;}
+table.ui-pivot {font-family: Verdana; font-size: 10pt; border-top: 0px;}
+table.ui-pivot td, table.ui-pivot th {white-space: nowrap;}
+table.ui-pivot caption {padding: 4px; text-align: left; border-bottom: 1px solid #ccc;}
+table.ui-pivot caption > div {float: left;}
+table.ui-pivot .ui-pivot-inactive {display: inline-block; padding: 4px; margin-right: 2px;}
+table.ui-pivot .ui-pivot-dim {border: 1px solid #d3d3d3;background: #e6e6e6;font-weight: normal;color: #555555;}
+table.ui-pivot .ui-pivot-subt {}
+table.ui-pivot .ui-pivot-subt-cell {}
+table.ui-pivot .ui-pivot-subt-cell:hover {}
+table.ui-pivot .ui-pivot-tot {border: 1px solid #b3b3b3;background: #c6c6c6;font-weight: normal;color: #333;}
+table.ui-pivot .ui-pivot-tot-cell {text-align: right; border: 1px solid #b3b3b3;background: #c6c6c6;font-weight: normal;color: #333;}
+table.ui-pivot .ui-pivot-tot-cell:hover {border-color: #a3a3a3;background: #b6b6b6;}
+table.ui-pivot td.cell {text-align: right; background: #ffd; padding: 1px 2px; border: 1px solid #d3d3d3;}
+table.ui-pivot td.cell:hover {background: #ffa; border-color: #c3c3c3;}
+table.ui-pivot th {text-align: center;}
+table.ui-pivot .ui-draggable-dragging {box-shadow: 3px 3px 5px #666;}
+.ui-pivot-iconsw {position: relative; display: none; z-index: 2;}
+.ui-pivot-iconsw span {display: inline-block;}
+.ui-pivot-iconsh {position: relative; display: none; z-index: 2;}
+.ui-pivot-iconsh span {display: block;}
+.ui-pivot-iconsh span:first-child {margin-left: -1px;}
