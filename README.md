@@ -3,7 +3,7 @@ jQuery UI Pivot Table
 
 A light-weight plugin to generate pivot tables.
 
-- **[Documentation and Demos](http://gluraschi.github.io/jquery-pivot)**
+- **[Documentation and Demos](https://github.com/gluraschi/jquery-pivot/)**
 
 Change Log
 
