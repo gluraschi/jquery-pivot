@@ -35,6 +35,14 @@ Change Log
 </script>
 ```
 
+## Características generales
+- Permite drag&drop de dimensiones.
+- Múltiples funciones de agregación.
+- Múltiples métricas calculadas.
+- Posibilidad de definir el formato de cada una de las métricas y la función de agregación.
+- Posibilidad de mostrar u ocultar totales y subtotales.
+- Ordenación por dimesión o por métrica.
+
 ## Opciones
 
 ### Asignación de datos
