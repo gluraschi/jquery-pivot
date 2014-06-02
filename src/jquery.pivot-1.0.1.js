@@ -1,5 +1,5 @@
 /**
- * jQuery UI Pivot 1.0.0
+ * jQuery UI Pivot 1.0.1
  * http://sistemasgsl.com
  *
  * Copyright 2014 Gabriel S. Luraschi
@@ -11,7 +11,7 @@
  */
 ( function( $ ) {
 $.widget( "gsl.pivot", {
-	version: "1.0.0",
+	version: "1.0.1",
 	
 	options: {
 		numberFormat: "decimal",
@@ -827,9 +827,17 @@ $.widget( "gsl.pivot", {
 				
 				// Removes selected item.
 				if ( ( index = self.options.rows.indexOf( m ) ) > -1 ) {
+					if ( self.options.rows.length == 1 ) {
+						return true;
+					}
+					
 					self.options.rows.splice( index, 1 );
 				}
 				else if ( ( index = self.options.cols.indexOf( m ) ) > -1 ) {
+					if ( self.options.cols.length == 1 ) {
+						return true;
+					}
+					
 					self.options.cols.splice( index, 1 );
 				}
 				else if ( ( index = self.options.inactive.indexOf( m ) ) > -1 ) {
@@ -863,7 +871,6 @@ $.widget( "gsl.pivot", {
 				changed = true;
 				return false;
 			},
-			
 			stop: function ( e, ui ) {
 				iconsW.fadeOut();
 				iconsH.fadeOut();
@@ -1140,7 +1147,7 @@ $.widget( "gsl.pivot", {
 	
 	// Draw pivot.
 	draw: function () {
-		var elem = $( self.element );
+		var elem = $( "<div />" ).css("display", "none");
 		elem.addClass( "ui-widget ui-widget-content ui-corner-all ui-pivot" );
 		
 		// DOM objects for cloning.
@@ -1585,17 +1592,22 @@ $.widget( "gsl.pivot", {
 			}
 		};
 		
-		// GO !
-		elem.find( ">*" ).remove();
+		// Draw all.
+		drawHead();
+		drawColTitles();
+		drawRowTitles();
+		drawGrid();
 		
-		// Do events.
 		setTimeout(function () {
-			drawHead();
-			drawColTitles();
-			drawRowTitles();
-			drawGrid();
 			self._interactions();
 		});
+		
+		// Display table.
+		var elemOld = $( self.element ).find( ">*" );
+		$( self.element ).append( elem );
+		elemOld.css("display", "none");
+		elem.fadeIn();
+		elemOld.remove();
 	},
 });
 })( jQuery );
